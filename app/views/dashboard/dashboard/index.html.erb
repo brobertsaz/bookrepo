@@ -1,2 +1,9 @@
-<h1>Dashboard::Dashboard#index</h1>
-<p>Find me in app/views/dashboard/dashboard/index.html.erb</p>
+<h1>Dashboard</h1>
+
+<% if student_signed_in? %>
+  <p>I'm a Student and I do not see anything here yet</p>
+<% end %>
+
+<% if teacher_signed_in? %>
+
+<% end %>

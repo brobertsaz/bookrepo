@@ -1,3 +1,4 @@
 class School < ApplicationRecord
-  has_many :students, class_name: "user", foreign_key: "user_id"
+  has_many :students
+  has_many :teachers
 end
