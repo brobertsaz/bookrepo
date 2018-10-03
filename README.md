@@ -1,7 +1,38 @@
-- Publishing house ‘XYZ’ has an online book repository. It wants to create an application with a subscription feature to provide users access to the library.
-- Build an RoR app for the following -
+## Setup
+1. Clone the repo:
+```
+git clone git@github.com:brobertsaz/bookrepo.git
+```
+2. cd into the repo:
+```
+cd bookrepo
+```
+3. It should prompt to install ruby if you have RVM or RBENV installed
+$. Install gems:
+```
+bundle
+```
+3. Provided that you have PostgreSQL installed and do not require a password locally, you can run:
+```
+rails db:setup
+```
+4. Start the server and go to localhost:3000
+```
+rails s
+```
+5. There is a link for teacher sign in
+```
+email: admin.teacher@test.com
+password: password
+```
+
+
+
+
 
 ## Requirements
+- Publishing house ‘XYZ’ has an online book repository. It wants to create an application with a subscription feature to provide users access to the library.
+- Build an RoR app for the following -
 
 1. Create a Subscription model with options for
    1 user
