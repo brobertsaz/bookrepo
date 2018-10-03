@@ -1,5 +1,5 @@
-Publishing house ‘XYZ’ has an online book repository. It wants to create an application with a subscription feature to provide users access to the library.
-Build an RoR app for the following -
+- Publishing house ‘XYZ’ has an online book repository. It wants to create an application with a subscription feature to provide users access to the library.
+- Build an RoR app for the following -
 
 ## Requirements
 
