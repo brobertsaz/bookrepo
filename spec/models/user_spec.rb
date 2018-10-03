@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'is not valid without a email' do
+    expect(User.new(email: nil)).to_not be_valid
+  end
+
+  it 'is not valid without a password' do
+    expect(User.new(email: 'test@test.com', password: nil)).to_not be_valid
+  end
 end
