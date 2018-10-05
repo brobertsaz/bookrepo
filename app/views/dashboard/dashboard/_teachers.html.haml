@@ -1,0 +1,16 @@
+= button_to 'Add Teacher', new_teacher_path, method: :get
+%table
+  %thead
+    %th Name
+    %th Email
+    %th Admin?
+    %th Actions
+  %tbody
+    - @teachers.each do |teacher|
+      %tr
+        %td= teacher.fullname
+        %td= teacher.email
+        %td= teacher.admin?
+        %td= button_to 'Edit', edit_teacher_path(teacher), method: :get
+        %td= button_to 'Delete', teacher_path(teacher), method: :delete, data: { confirm: 'Are you sure?' }
+        %td

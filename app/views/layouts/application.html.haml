@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bookrepo
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav
+      - if student_signed_in?
+        = link_to 'Log out', destroy_student_session_path, method: :delete
+      - if teacher_signed_in?
+        = link_to 'Log out', destroy_teacher_session_path, method: :delete
+    %p.notice= notice
+    %p.alert= alert
+    = yield

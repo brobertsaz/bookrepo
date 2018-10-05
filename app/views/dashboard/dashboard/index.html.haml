@@ -1,0 +1,12 @@
+%h1 Dashboard
+- if student_signed_in?
+  %p I'm a Student and I do not see anything here yet
+- if teacher_signed_in?
+  - unless current_teacher.admin?
+    %p I'm a non Admin Teacher and I do not see anything here yet
+  - else
+    %h3 Teachers
+    = render 'teachers'
+    %hr/
+    %h3 Students
+    = render 'students'
