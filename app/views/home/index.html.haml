@@ -2,14 +2,16 @@
   .row
     .col-sm-6
       .card{:style => "width: 24rem;"}
-        .card-body
+        .card-body#teacher
           %h5.card-title Teacher Sign In
-          %p.card-text If you are a teacher and already have an account, please sign in.
+          %p.card-text If you are a teacher and already have an account, please sign in, otherwise sign up.
           = link_to 'Sign In', new_teacher_session_path, class: 'btn btn-primary'
+          = link_to 'Sign Up', new_teacher_registration_path, class: 'btn btn-secondary'
 
     .col-sm-6
       .card{:style => "width: 24rem;"}
-        .card-body
+        .card-body#student
           %h5.card-title Student Sign In
-          %p.card-text If you are a student and already have an account, please sign in.
+          %p.card-text If you are a student and already have an account, please sign in, otherwise sign up.
           = link_to 'Sign In', new_student_session_path, class: 'btn btn-primary'
+          = link_to 'Sign Up', new_student_registration_path, class: 'btn btn-secondary'

@@ -42,6 +42,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'capybara'
 end
 
 group :development do
@@ -59,3 +60,4 @@ gem 'simple_form'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem "haml-rails", "~> 1.0"
+
