@@ -1,7 +1,8 @@
-%h2 Edit Teacher
-= simple_form_for @teacher, method: :patch do |f|
-  = f.input :email
-  = f.input :first_name
-  = f.input :last_name
-  = f.input :school_id, collection: School.all
-  = f.submit
+.col-md-8.offset-md-2
+  %h2 Edit Teacher
+  = simple_form_for @teacher, method: :patch do |f|
+    = f.input :email
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :school_id, collection: School.all
+    = f.submit class: 'btn btn-primary'

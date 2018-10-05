@@ -1,0 +1,18 @@
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  %a.navbar-brand{:href => "#"} BookRepo
+  %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    %ul.navbar-nav
+      %li.nav-item.active
+        %a.nav-link{:href => "/"}
+          Home
+          %span.sr-only (current)
+      %li.nav-item
+        - if current_user
+          = link_to 'Dashboard', dashboard_root_path, class: 'nav-link'
+      %li.nav-item
+        - if student_signed_in?
+          = link_to 'Log out', destroy_student_session_path, method: :delete, class: 'nav-link'
+        - if teacher_signed_in?
+          = link_to 'Log out', destroy_teacher_session_path, method: :delete, class: 'nav-link'

@@ -1,5 +1,4 @@
-= button_to 'Add Student', new_student_path, method: :get
-%table
+%table.table.table-striped
   %thead
     %th Name
     %th Email
@@ -9,5 +8,11 @@
       %tr
         %td= student.fullname
         %td= student.email
-        %td= button_to 'Edit', edit_student_path(student), method: :get
-        %td= button_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' }
+        %td
+          = link_to 'Edit', edit_student_path(student),
+                            method: :get,
+                            class: 'btn btn-secondary btn-sm'
+          = link_to 'Delete', student_path(student),
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' },
+                              class: 'btn btn-danger btn-sm'

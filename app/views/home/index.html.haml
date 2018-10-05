@@ -1,5 +1,15 @@
-%h1 Welcome
-%p
-  If you are a teacher, sign in #{button_to 'here', new_teacher_session_path}
-%p
-  If you are a student, sign in #{button_to 'here', new_student_session_path}
+.col-sm-12
+  .row
+    .col-sm-6
+      .card{:style => "width: 24rem;"}
+        .card-body
+          %h5.card-title Teacher Sign In
+          %p.card-text If you are a teacher and already have an account, please sign in.
+          = link_to 'Sign In', new_teacher_session_path, class: 'btn btn-primary'
+
+    .col-sm-6
+      .card{:style => "width: 24rem;"}
+        .card-body
+          %h5.card-title Student Sign In
+          %p.card-text If you are a student and already have an account, please sign in.
+          = link_to 'Sign In', new_student_session_path, class: 'btn btn-primary'

@@ -6,7 +6,13 @@
     %p I'm a non Admin Teacher and I do not see anything here yet
   - else
     %h3 Teachers
+    = link_to 'Add Teacher', new_teacher_path,
+                         method: :get,
+                         class: 'btn btn-primary float-right'
     = render 'teachers'
     %hr/
     %h3 Students
+    = link_to 'Add Student', new_student_path,
+                         method: :get,
+                         class: 'btn btn-primary float-right'
     = render 'students'
